@@ -1,0 +1,14 @@
+<%- include("partials/header"); -%>
+
+<h1>Home</h1>
+
+<p><%= homeContent %></p>   
+
+<% publication.forEach((post) => { %>
+    <h2> <%= post.postTitle%> </h2>
+    <%const len = 250;%>
+    <p> <%= post.post.substring(0,len) %>... <a href="/update/<%= post.postTitle %>">read more</a> </p>
+    
+<%})%>
+
+<%- include("partials/footer"); -%>
